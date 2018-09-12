@@ -23,6 +23,10 @@ public class Latihan1 {
     String identitas = "Salsabila Fawnia Ramadhani K / X RPL 5 / 40";
 
     tampilJudul(identitas);
+    int n = tampilInput();
+    BigInteger hasil = fibo(n);
+    tampilHasil(n,hasil);
+    
     }
     private static int tampilInput(){
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +37,7 @@ public class Latihan1 {
         return n;
     }
     
-        int n = tampilInput();
+        
         
     
     private static BigInteger fibo(int n){
@@ -49,8 +53,13 @@ public class Latihan1 {
         }
         return hasil[n-1];
     }
-    BigInteger hasil = fibo(n);
     
+    
+    private static void tampilHasil(int n, BigInteger hasil){
+        System.out.println("Bilangan Fibonacci ke-"+n+" : " + hasil);
+   
+    }
+   
 }
 
 
